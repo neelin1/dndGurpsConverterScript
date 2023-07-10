@@ -1,0 +1,278 @@
+{
+  "name": "Star Drake",
+  "size": [
+    "L"
+  ],
+  "environment": [
+    "hill",
+    "mountain"
+  ],
+  "type": "dragon",
+  "source": "ToB",
+  "alignment": [
+    "N"
+  ],
+  "ac": [
+    {
+      "ac": 19,
+      "from": [
+        "natural armor"
+      ]
+    }
+  ],
+  "hp": {
+    "average": 189,
+    "formula": "18d10 + 90"
+  },
+  "speed": {
+    "walk": 40,
+    "fly": 100
+  },
+  "str": 20,
+  "dex": 17,
+  "con": 21,
+  "int": 16,
+  "wis": 24,
+  "cha": 20,
+  "save": {
+    "dex": "+8",
+    "con": "+10",
+    "int": "+8",
+    "wis": "+12",
+    "cha": "+10"
+  },
+  "skill": {
+    "arcana": "+8",
+    "history": "+8",
+    "insight": "+12",
+    "perception": "+12",
+    "religion": "+8"
+  },
+  "immune": [
+    "cold",
+    "fire",
+    {
+      "immune": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "note": "from nonmagical weapons",
+      "cond": true
+    }
+  ],
+  "conditionImmune": [
+    "charmed",
+    "frightened",
+    "paralyzed",
+    "unconscious"
+  ],
+  "senses": [
+    "truesight 120 ft."
+  ],
+  "passive": 22,
+  "languages": [
+    "Celestial",
+    "Common",
+    "Draconic",
+    "Dwarvish",
+    "Elvish",
+    "Infernal",
+    "Primordial"
+  ],
+  "cr": "15",
+  "trait": [
+    {
+      "name": "Legendary Resistance (2/Day)",
+      "entries": [
+        "If the star drake fails a saving throw, it can choose to succeed instead."
+      ]
+    },
+    {
+      "name": "Magic Resistance",
+      "entries": [
+        "The drake has advantage on saving throws against spells and other magical effects."
+      ]
+    },
+    {
+      "name": "Magic Weapons",
+      "entries": [
+        "The drake's weapon attacks are magical."
+      ]
+    },
+    {
+      "name": "Nimbus of Stars",
+      "entries": [
+        "The drake is surrounded by a whirling nimbus of tiny motes of starlight. A sighted creature that starts its turn within 10 feet of the drake must make a successful {@dc 18} Constitution saving throw or become {@condition incapacitated}. At the start of a character's turn, a character can choose to avert its eyes and gain immunity against this effect until the start of its next turn, but it must treat the drake as {@condition invisible} while the character's eyes are averted."
+      ]
+    }
+  ],
+  "action": [
+    {
+      "name": "Multiattack",
+      "entries": [
+        "The drake makes one bite attack and two claw attacks."
+      ]
+    },
+    {
+      "name": "Bite",
+      "entries": [
+        "{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}16 ({@damage 2d10 + 5}) piercing damage."
+      ]
+    },
+    {
+      "name": "Claw",
+      "entries": [
+        "{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) slashing damage."
+      ]
+    },
+    {
+      "name": "Breath Weapon {@recharge 5}",
+      "entries": [
+        "The drake exhales either fire or frigid air in a 40-foot cone. Each creature in that area takes 78 ({@damage 12d12}) fire or cold damage, whichever the drake wishes, or half damage with a successful {@dc 18} Dexterity saving throw."
+      ]
+    },
+    {
+      "name": "Searing Star (1/Day)",
+      "entries": [
+        "{@atk rs} {@hit 12} to hit, range 120 ft., one target. {@h}65 ({@damage 10d12}) force damage, and the target must succeed on a {@dc 18} Constitution saving throw or be permanently {@condition blinded}."
+      ]
+    }
+  ],
+  "legendary": [
+    {
+      "name": "Bite Attack",
+      "entries": [
+        "The drake makes one bite attack."
+      ]
+    },
+    {
+      "name": "Nova (Costs 2 Actions)",
+      "entries": [
+        "The drake momentarily doubles the radius and intensity of its nimbus of stars. Every sighted creature within 20 feet of the drake must make a successful {@dc 18} Constitution saving throw or become {@condition blinded} until the end of its next turn. Characters who are averting their eyes are immune to the nova."
+      ]
+    },
+    {
+      "name": "Pale Sparks",
+      "entries": [
+        "The drake casts {@spell faerie fire} or {@spell moonbeam}."
+      ]
+    }
+  ],
+  "page": 156,
+  "spellcasting": [
+    {
+      "name": "Innate Spellcasting",
+      "headerEntries": [
+        "The drake's innate spellcasting ability is Wisdom (spell save {@dc 20}). It can innately cast the following spells, requiring no material components:"
+      ],
+      "will": [
+        "{@spell faerie fire}",
+        "{@spell moonbeam}"
+      ],
+      "daily": {
+        "3": [
+          "{@spell plane shift}"
+        ],
+        "1e": [
+          "{@spell gate}",
+          "{@spell planar binding}"
+        ]
+      },
+      "ability": "wis",
+      "type": "spellcasting"
+    }
+  ],
+  "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB/token/Star%20Drake.png",
+  "fluff": {
+    "images": [
+      {
+        "type": "image",
+        "href": {
+          "type": "external",
+          "url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB/Star%20Drake.webp"
+        }
+      }
+    ],
+    "entries": [
+      "{@i Twinkling motes of light move around this draconic creature's body like stars, their reflections twinkling across its metallic scales.}",
+      {
+        "type": "entries",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "entries",
+                "name": "Returned Travelers",
+                "entries": [
+                  "A drake's curiosity sometimes drives it to seek experiences beyond its plane, and it finds companions with which it travels the multiverse. Such drakes return quite clearly changed in appearance, demeanor, and ability. Regardless of which type of drake embarked on the journey, the creature always returns as a star drake."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Mortal Protectors",
+                "entries": [
+                  "Star drakes consider themselves protectors of the Material Plane. They view those from other planes as meddlers in the affairs of humanoid races, regarding fiends and celestials as equally threatening. Star drakes might negotiate with, drive off, or destroy such meddlers. Occasionally, they lead extraplanar incursions to make it clear outsiders are unwelcome."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Glimmering Lights",
+                "entries": [
+                  "A star drake differs in appearance from dragons primarily by its mottled metallic scales and the nimbus of tiny stars surrounding its body. A star drake measures 10 feet long and weighs roughly 500 lb."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "actionTags": [
+    "Breath Weapon",
+    "Multiattack"
+  ],
+  "traitTags": [
+    "Legendary Resistances",
+    "Magic Resistance",
+    "Magic Weapons"
+  ],
+  "senseTags": [
+    "U"
+  ],
+  "languageTags": [
+    "CE",
+    "C",
+    "DR",
+    "D",
+    "E",
+    "I",
+    "P"
+  ],
+  "damageTags": [
+    "P",
+    "S",
+    "F",
+    "C",
+    "O"
+  ],
+  "miscTags": [
+    "MW",
+    "RCH",
+    "AOE"
+  ],
+  "spellcastingTags": [
+    "I"
+  ],
+  "conditionInflict": [
+    "blinded",
+    "incapacitated"
+  ],
+  "conditionInflictLegendary": [
+    "blinded"
+  ],
+  "damageTagsSpell": [
+    "R"
+  ]
+}
