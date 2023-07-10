@@ -8,7 +8,9 @@ This is a rough conversion, it probably won't be exactly right and should be edi
 1. Clone github repo
 2. Go to 5e.tools. Find the monster you want to clone. Click Open Pop-Up in the top right corner of the statblock. Click the *{}* button and click copy code.
 3. Paste code into *input.json*
-4. Run '''converter.py'''
+4. Run *converter.py*
+5. Types yes or no if you want the character to have combat reflexes or not
+6. Copy *output.gcs* to wherever you store you gcs files and rename it to the correct monsters (*demogorgon.gcs* for example)
 
 # Conversion Method
 

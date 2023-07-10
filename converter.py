@@ -2944,65 +2944,82 @@ def run_convert(input_data, user_input: str):
         else:
             newTrait["name"] = "Spellcasting"
             description = ""
-            if "0" in input_data["spellcasting"][0]["spells"]:
-                description = description + "0: "
-                for spell in input_data["spellcasting"][0]["spells"]["0"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "1" in input_data["spellcasting"][0]["spells"]:
-                description = description + "1: "
-                for spell in input_data["spellcasting"][0]["spells"]["1"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "2" in input_data["spellcasting"][0]["spells"]:
-                description = description + "2: "
-                for spell in input_data["spellcasting"][0]["spells"]["2"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "3" in input_data["spellcasting"][0]["spells"]:
-                description = description + "3: "
-                for spell in input_data["spellcasting"][0]["spells"]["3"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "4" in input_data["spellcasting"][0]["spells"]:
-                description = description + "4: "
-                for spell in input_data["spellcasting"][0]["spells"]["4"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "5" in input_data["spellcasting"][0]["spells"]:
-                description = description + "5: "
-                for spell in input_data["spellcasting"][0]["spells"]["5"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "6" in input_data["spellcasting"][0]["spells"]:
-                description = description + "6: "
-                for spell in input_data["spellcasting"][0]["spells"]["6"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "7" in input_data["spellcasting"][0]["spells"]:
-                description = description + "7: "
-                for spell in input_data["spellcasting"][0]["spells"]["7"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "8" in input_data["spellcasting"][0]["spells"]:
-                description = description + "8: "
-                for spell in input_data["spellcasting"][0]["spells"]["8"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
-                description = description[:-2] + "\n"
-            if "9" in input_data["spellcasting"][0]["spells"]:
-                description = description + "9: "
-                for spell in input_data["spellcasting"][0]["spells"]["9"]["spells"]:
-                    # remove {@ from begginging of spell and } from end of spell
-                    description = description + spell[8:-1] + ", "
+            if "headerEntries" in input_data["spellcasting"][0]:
+                description = convert_to_gurps(
+                    input_data["spellcasting"][0]["headerEntries"][0]
+                )
+            if "will" in input_data["spellcasting"][0]:
+                description = (
+                    description
+                    + "\nAt Will: "
+                    + convert_to_gurps(str(input_data["spellcasting"][0]["will"]))
+                )
+            if "daily" in input_data["spellcasting"][0]:
+                description = (
+                    description
+                    + "\nDaily: "
+                    + convert_to_gurps(str(input_data["spellcasting"][0]["daily"]))
+                )
+            if "spells" in input_data["spellcasting"][0]:
+                if "0" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "0: "
+                    for spell in input_data["spellcasting"][0]["spells"]["0"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "1" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "1: "
+                    for spell in input_data["spellcasting"][0]["spells"]["1"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "2" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "2: "
+                    for spell in input_data["spellcasting"][0]["spells"]["2"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "3" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "3: "
+                    for spell in input_data["spellcasting"][0]["spells"]["3"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "4" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "4: "
+                    for spell in input_data["spellcasting"][0]["spells"]["4"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "5" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "5: "
+                    for spell in input_data["spellcasting"][0]["spells"]["5"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "6" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "6: "
+                    for spell in input_data["spellcasting"][0]["spells"]["6"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "7" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "7: "
+                    for spell in input_data["spellcasting"][0]["spells"]["7"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "8" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "8: "
+                    for spell in input_data["spellcasting"][0]["spells"]["8"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
+                    description = description[:-2] + "\n"
+                if "9" in input_data["spellcasting"][0]["spells"]:
+                    description = description + "9: "
+                    for spell in input_data["spellcasting"][0]["spells"]["9"]["spells"]:
+                        # remove {@ from begginging of spell and } from end of spell
+                        description = description + spell[8:-1] + ", "
             newTrait["notes"] = description
             default_data["traits"].append(newTrait)
 
@@ -5012,7 +5029,7 @@ def run_convert(input_data, user_input: str):
     #         pass
 
     # WRITE OUTPUT FILE
-    with open("output.json", "w") as f:
+    with open("output.gcs", "w") as f:
         json.dump(default_data, f, indent=4)
 
 

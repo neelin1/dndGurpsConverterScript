@@ -1,109 +1,134 @@
 {
-  "name": "Star Drake",
+  "name": "Demogorgon",
+  "isNamedCreature": true,
+  "source": "MPMM",
+  "page": 90,
+  "otherSources": [
+    {
+      "source": "MTF",
+      "page": 144
+    }
+  ],
   "size": [
-    "L"
+    "H"
   ],
-  "environment": [
-    "hill",
-    "mountain"
-  ],
-  "type": "dragon",
-  "source": "ToB",
+  "type": {
+    "type": "fiend",
+    "tags": [
+      "demon"
+    ]
+  },
   "alignment": [
-    "N"
+    "C",
+    "E"
   ],
   "ac": [
     {
-      "ac": 19,
+      "ac": 22,
       "from": [
         "natural armor"
       ]
     }
   ],
   "hp": {
-    "average": 189,
-    "formula": "18d10 + 90"
+    "average": 464,
+    "formula": "32d12 + 256"
   },
   "speed": {
-    "walk": 40,
-    "fly": 100
+    "walk": 50,
+    "swim": 50
   },
-  "str": 20,
-  "dex": 17,
-  "con": 21,
-  "int": 16,
-  "wis": 24,
-  "cha": 20,
+  "str": 29,
+  "dex": 14,
+  "con": 26,
+  "int": 20,
+  "wis": 17,
+  "cha": 25,
   "save": {
-    "dex": "+8",
-    "con": "+10",
-    "int": "+8",
-    "wis": "+12",
-    "cha": "+10"
+    "dex": "+10",
+    "con": "+16",
+    "wis": "+11",
+    "cha": "+15"
   },
   "skill": {
-    "arcana": "+8",
-    "history": "+8",
-    "insight": "+12",
-    "perception": "+12",
-    "religion": "+8"
+    "insight": "+11",
+    "perception": "+19"
   },
-  "immune": [
+  "senses": [
+    "truesight 120 ft."
+  ],
+  "passive": 29,
+  "resist": [
     "cold",
     "fire",
+    "lightning"
+  ],
+  "immune": [
+    "poison",
     {
       "immune": [
         "bludgeoning",
         "piercing",
         "slashing"
       ],
-      "note": "from nonmagical weapons",
+      "note": "from nonmagical attacks",
       "cond": true
     }
   ],
   "conditionImmune": [
     "charmed",
+    "exhaustion",
     "frightened",
-    "paralyzed",
-    "unconscious"
+    "poisoned"
   ],
-  "senses": [
-    "truesight 120 ft."
-  ],
-  "passive": 22,
   "languages": [
-    "Celestial",
-    "Common",
-    "Draconic",
-    "Dwarvish",
-    "Elvish",
-    "Infernal",
-    "Primordial"
+    "all",
+    "telepathy 120 ft."
   ],
-  "cr": "15",
+  "cr": "26",
+  "spellcasting": [
+    {
+      "name": "Spellcasting",
+      "headerEntries": [
+        "Demogorgon casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 23}):"
+      ],
+      "will": [
+        "{@spell detect magic}",
+        "{@spell major image}"
+      ],
+      "daily": {
+        "3e": [
+          "{@spell dispel magic}",
+          "{@spell fear}",
+          "{@spell telekinesis}"
+        ],
+        "1e": [
+          "{@spell feeblemind}",
+          "{@spell project image}"
+        ]
+      },
+      "ability": "cha",
+      "displayAs": "action",
+      "type": "spellcasting"
+    }
+  ],
   "trait": [
     {
-      "name": "Legendary Resistance (2/Day)",
+      "name": "Legendary Resistance (3/Day)",
       "entries": [
-        "If the star drake fails a saving throw, it can choose to succeed instead."
+        "If Demogorgon fails a saving throw, he can choose to succeed instead."
       ]
     },
     {
       "name": "Magic Resistance",
       "entries": [
-        "The drake has advantage on saving throws against spells and other magical effects."
+        "Demogorgon has advantage on saving throws against spells and other magical effects."
       ]
     },
     {
-      "name": "Magic Weapons",
+      "name": "Two Heads",
       "entries": [
-        "The drake's weapon attacks are magical."
-      ]
-    },
-    {
-      "name": "Nimbus of Stars",
-      "entries": [
-        "The drake is surrounded by a whirling nimbus of tiny motes of starlight. A sighted creature that starts its turn within 10 feet of the drake must make a successful {@dc 18} Constitution saving throw or become {@condition incapacitated}. At the start of a character's turn, a character can choose to avert its eyes and gain immunity against this effect until the start of its next turn, but it must treat the drake as {@condition invisible} while the character's eyes are averted."
+        "Demogorgon has advantage on saving throws against being {@condition blinded}, {@condition deafened}, {@condition stunned}, or knocked {@condition unconscious}."
       ]
     }
   ],
@@ -111,168 +136,116 @@
     {
       "name": "Multiattack",
       "entries": [
-        "The drake makes one bite attack and two claw attacks."
+        "Demogorgon makes two Tentacle attacks. He can replace one attack with a use of Gaze."
       ]
     },
     {
-      "name": "Bite",
+      "name": "Tentacle",
       "entries": [
-        "{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}16 ({@damage 2d10 + 5}) piercing damage."
+        "{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}28 ({@damage 3d12 + 9}) force damage. If the target is a creature, it must succeed on a {@dc 23} Constitution saving throw, or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
       ]
     },
     {
-      "name": "Claw",
+      "name": "Gaze",
       "entries": [
-        "{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}15 ({@damage 3d6 + 5}) slashing damage."
-      ]
-    },
-    {
-      "name": "Breath Weapon {@recharge 5}",
-      "entries": [
-        "The drake exhales either fire or frigid air in a 40-foot cone. Each creature in that area takes 78 ({@damage 12d12}) fire or cold damage, whichever the drake wishes, or half damage with a successful {@dc 18} Dexterity saving throw."
-      ]
-    },
-    {
-      "name": "Searing Star (1/Day)",
-      "entries": [
-        "{@atk rs} {@hit 12} to hit, range 120 ft., one target. {@h}65 ({@damage 10d12}) force damage, and the target must succeed on a {@dc 18} Constitution saving throw or be permanently {@condition blinded}."
+        "Demogorgon turns his magical gaze toward one creature he can see within 120 feet of him. The target must succeed on a {@dc 23} Wisdom saving throw or suffer one of the following effects (choose one or roll a {@dice d6}):",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "1–2: Beguiling Gaze",
+              "entries": [
+                "The target is {@condition stunned} until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "3–4: Confusing Gaze",
+              "entries": [
+                "The target suffers the effect of the {@spell confusion} spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "5–6: Hypnotic Gaze",
+              "entries": [
+                "The target is {@condition charmed} by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the {@condition charmed} target uses its action, reaction, and movement."
+              ]
+            }
+          ]
+        }
       ]
     }
   ],
+  "legendaryActions": 2,
   "legendary": [
     {
-      "name": "Bite Attack",
+      "name": "Gaze",
       "entries": [
-        "The drake makes one bite attack."
+        "Demogorgon uses Gaze and must use either Beguiling Gaze or Confusing Gaze."
       ]
     },
     {
-      "name": "Nova (Costs 2 Actions)",
+      "name": "Tail",
       "entries": [
-        "The drake momentarily doubles the radius and intensity of its nimbus of stars. Every sighted creature within 20 feet of the drake must make a successful {@dc 18} Constitution saving throw or become {@condition blinded} until the end of its next turn. Characters who are averting their eyes are immune to the nova."
+        "{@atk mw} {@hit 17} to hit, reach 15 ft., one target. {@h}20 ({@damage 2d10 + 9}) bludgeoning damage plus 11 ({@damage 2d10}) necrotic damage."
       ]
     },
     {
-      "name": "Pale Sparks",
+      "name": "Cast a Spell (Costs 2 Actions)",
       "entries": [
-        "The drake casts {@spell faerie fire} or {@spell moonbeam}."
+        "Demogorgon uses Spellcasting."
       ]
     }
   ],
-  "page": 156,
-  "spellcasting": [
-    {
-      "name": "Innate Spellcasting",
-      "headerEntries": [
-        "The drake's innate spellcasting ability is Wisdom (spell save {@dc 20}). It can innately cast the following spells, requiring no material components:"
-      ],
-      "will": [
-        "{@spell faerie fire}",
-        "{@spell moonbeam}"
-      ],
-      "daily": {
-        "3": [
-          "{@spell plane shift}"
-        ],
-        "1e": [
-          "{@spell gate}",
-          "{@spell planar binding}"
-        ]
-      },
-      "ability": "wis",
-      "type": "spellcasting"
-    }
-  ],
-  "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB/token/Star%20Drake.png",
-  "fluff": {
-    "images": [
-      {
-        "type": "image",
-        "href": {
-          "type": "external",
-          "url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB/Star%20Drake.webp"
-        }
-      }
-    ],
-    "entries": [
-      "{@i Twinkling motes of light move around this draconic creature's body like stars, their reflections twinkling across its metallic scales.}",
-      {
-        "type": "entries",
-        "entries": [
-          {
-            "type": "entries",
-            "entries": [
-              {
-                "type": "entries",
-                "name": "Returned Travelers",
-                "entries": [
-                  "A drake's curiosity sometimes drives it to seek experiences beyond its plane, and it finds companions with which it travels the multiverse. Such drakes return quite clearly changed in appearance, demeanor, and ability. Regardless of which type of drake embarked on the journey, the creature always returns as a star drake."
-                ]
-              },
-              {
-                "type": "entries",
-                "name": "Mortal Protectors",
-                "entries": [
-                  "Star drakes consider themselves protectors of the Material Plane. They view those from other planes as meddlers in the affairs of humanoid races, regarding fiends and celestials as equally threatening. Star drakes might negotiate with, drive off, or destroy such meddlers. Occasionally, they lead extraplanar incursions to make it clear outsiders are unwelcome."
-                ]
-              },
-              {
-                "type": "entries",
-                "name": "Glimmering Lights",
-                "entries": [
-                  "A star drake differs in appearance from dragons primarily by its mottled metallic scales and the nimbus of tiny stars surrounding its body. A star drake measures 10 feet long and weighs roughly 500 lb."
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+  "legendaryGroup": {
+    "name": "Demogorgon",
+    "source": "MPMM"
   },
-  "actionTags": [
-    "Breath Weapon",
-    "Multiattack"
-  ],
   "traitTags": [
     "Legendary Resistances",
-    "Magic Resistance",
-    "Magic Weapons"
+    "Magic Resistance"
   ],
   "senseTags": [
     "U"
   ],
+  "actionTags": [
+    "Multiattack",
+    "Tentacles"
+  ],
   "languageTags": [
-    "CE",
-    "C",
-    "DR",
-    "D",
-    "E",
-    "I",
-    "P"
+    "TP",
+    "XX"
   ],
   "damageTags": [
-    "P",
-    "S",
-    "F",
-    "C",
+    "B",
+    "N",
+    "O"
+  ],
+  "damageTagsSpell": [
+    "Y"
+  ],
+  "spellcastingTags": [
     "O"
   ],
   "miscTags": [
+    "HPR",
     "MW",
-    "RCH",
-    "AOE"
-  ],
-  "spellcastingTags": [
-    "I"
+    "RCH"
   ],
   "conditionInflict": [
+    "charmed",
+    "stunned"
+  ],
+  "conditionInflictSpell": [
     "blinded",
-    "incapacitated"
+    "deafened",
+    "frightened",
+    "restrained"
   ],
-  "conditionInflictLegendary": [
-    "blinded"
-  ],
-  "damageTagsSpell": [
-    "R"
-  ]
+  "hasToken": true,
+  "hasFluff": true,
+  "hasFluffImages": true
 }
