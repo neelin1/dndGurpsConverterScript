@@ -4,6 +4,8 @@ This converter automatically converts json files from 5e.tools (Dungeons and Dra
 
 This is a rough conversion, it probably won't be exactly right and should be edited. In particular, health calculations are off.
 
+Let me know of any issues. There are some discrepencies between json files. Sometimes an error will arise. Let me know and I will do my best to address it.
+
 # Instructions
 1. Clone github repo
 2. Go to 5e.tools. Find the monster you want to clone. Click Open Pop-Up in the top right corner of the statblock. Click the *{}* button and click copy code.
