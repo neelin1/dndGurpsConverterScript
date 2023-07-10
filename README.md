@@ -112,6 +112,7 @@ The following abilities have more specific abilities
 - Undead Fortitude -> Undead Fortitude and Injury Tolerance
 
 ### Spells
+Adds the spells as a trait
 
 ### Legendary Actions
 - Added as a custom trait reaction
@@ -153,11 +154,4 @@ Bonus actions are added as a special trait
 Adds each languge as a language trait
 
 ## Senses
-
-## Size Modifier
-
-## Extra Health
-
-## Info
-
-## Image
+Senses are added as traits
