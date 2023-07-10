@@ -12,7 +12,7 @@
     ],
     "profile": {
         "player_name": "Zane Neelin",
-        "name": "Demogorgon",
+        "name": "Enormous Tentacle",
         "handedness": "Right",
         "tech_level": "4",
         "SM": 3
@@ -461,10 +461,10 @@
     "attributes": [
         {
             "attr_id": "st",
-            "adj": 11,
+            "adj": 6,
             "calc": {
-                "value": 19,
-                "points": 90
+                "value": 14,
+                "points": 40
             }
         },
         {
@@ -477,18 +477,18 @@
         },
         {
             "attr_id": "iq",
-            "adj": 5,
+            "adj": 0,
             "calc": {
-                "value": 15,
-                "points": 100
+                "value": 10,
+                "points": 0
             }
         },
         {
             "attr_id": "ht",
-            "adj": 8,
+            "adj": 1,
             "calc": {
-                "value": 18,
-                "points": 80
+                "value": 11,
+                "points": 10
             }
         },
         {
@@ -693,33 +693,6 @@
             }
         },
         {
-            "id": "453ded5e-34a9-4cb9-b100-b21b8eac0f18",
-            "type": "trait",
-            "name": "High Pain Threshold",
-            "reference": "B59",
-            "notes": "Never suffer shock penalties when injured",
-            "tags": [
-                "Advantage",
-                "Physical"
-            ],
-            "base_points": 10,
-            "features": [
-                {
-                    "type": "conditional_modifier",
-                    "situation": "on all HT rolls to avoid knockdown and stunning",
-                    "amount": 3
-                },
-                {
-                    "type": "conditional_modifier",
-                    "situation": "to resist torture",
-                    "amount": 3
-                }
-            ],
-            "calc": {
-                "points": 10
-            }
-        },
-        {
             "id": "e36a16e5-aba0-41d3-89a6-8825eb72565a",
             "type": "trait",
             "name": "Acute Vision",
@@ -728,7 +701,7 @@
                 "Advantage",
                 "Physical"
             ],
-            "levels": 8,
+            "levels": 2,
             "points_per_level": 2,
             "features": [
                 {
@@ -744,864 +717,39 @@
             }
         },
         {
-            "id": "6363c644-2f3a-45e2-bd42-5200d7301284",
+            "id": "33bd2029-3d03-4f46-b307-907ff4f38836",
             "type": "trait",
-            "name": "Combat Reflexes",
-            "reference": "B43",
-            "notes": "Never freeze",
-            "tags": [
-                "Advantage",
-                "Mental"
-            ],
-            "base_points": 15,
-            "prereqs": {
-                "type": "prereq_list",
-                "all": true,
-                "prereqs": [
-                    {
-                        "type": "trait_prereq",
-                        "has": false,
-                        "name": {
-                            "compare": "is",
-                            "qualifier": "Enhanced Time Sense"
-                        }
-                    }
-                ]
-            },
-            "features": [
-                {
-                    "type": "skill_bonus",
-                    "selection_type": "skills_with_name",
-                    "name": {
-                        "compare": "starts_with",
-                        "qualifier": "fast-draw"
-                    },
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "dodge",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "parry",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "block",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "fright_check",
-                    "amount": 2
-                },
-                {
-                    "type": "conditional_modifier",
-                    "situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
-                    "amount": 6
-                },
-                {
-                    "type": "conditional_modifier",
-                    "situation": "to initiative rolls for your side (+2 if you are the leader)",
-                    "amount": 1
-                }
-            ],
-            "calc": {
-                "points": 15
-            }
-        },
-        {
-            "id": "0db6d447-63b9-4c05-9559-926be8662e99",
-            "type": "trait",
-            "name": "Damage Resistance",
-            "reference": "B47,P45,MA43,PSI14",
-            "tags": [
-                "Advantage",
-                "Exotic",
-                "Physical"
-            ],
-            "modifiers": [
-                {
-                    "id": "71e0ea7a-bb0e-409d-b01d-aa247b4e66f6",
-                    "type": "modifier",
-                    "name": "Force Field",
-                    "reference": "B47",
-                    "cost": 20,
-                    "disabled": true
-                },
-                {
-                    "id": "a5e89aca-0b61-483e-8ae3-d6086856cf9a",
-                    "type": "modifier",
-                    "name": "Hardened",
-                    "reference": "B47",
-                    "cost": 20,
-                    "levels": 1,
-                    "disabled": true
-                },
-                {
-                    "id": "0377b71f-5bfe-44a7-b1a0-db38c7952845",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Enhances @Trait@",
-                    "cost": 80,
-                    "disabled": true
-                },
-                {
-                    "id": "db27da09-5815-4776-9af9-6d9741d8e52a",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Healing only",
-                    "cost": 80,
-                    "disabled": true
-                },
-                {
-                    "id": "0e4c391b-1076-40f2-92b6-c5d3c60b78fd",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Enhances any trait",
-                    "cost": 100,
-                    "disabled": true
-                },
-                {
-                    "id": "8b422514-296a-4b7c-b350-6b7e7d2be0e9",
-                    "type": "modifier",
-                    "name": "Reflection",
-                    "reference": "B47",
-                    "cost": 100,
-                    "disabled": true
-                },
-                {
-                    "id": "419ab96d-ea87-4894-b6d8-a6ee32a5d416",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Rare@",
-                    "cost": -1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "a8c6d43d-430e-4773-a64c-200f75009e65",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Occasional@",
-                    "cost": -5,
-                    "disabled": true
-                },
-                {
-                    "id": "e9503abd-7621-42c4-8ced-3981ec7c6d9a",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Common@",
-                    "cost": -10,
-                    "disabled": true
-                },
-                {
-                    "id": "1585a884-94e2-4152-b7b7-d3b6cc253c58",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Very Common@",
-                    "cost": -15,
-                    "disabled": true
-                },
-                {
-                    "id": "131c5627-2f5a-4f3f-8a52-08417003bc95",
-                    "type": "modifier",
-                    "name": "Directional",
-                    "reference": "B47",
-                    "notes": "Front",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "132e7d43-7920-45f5-bcde-036029aa49f2",
-                    "type": "modifier",
-                    "name": "Flexible",
-                    "reference": "B47",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "d9e01c00-3ac2-4f4d-ae5f-45b34441df13",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Very Common Attack Form@",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "72f08aac-bc4a-43fe-875b-8747b7397bec",
-                    "type": "modifier",
-                    "name": "Semi-Ablative",
-                    "reference": "B47",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "13410164-cee1-4956-832c-47bcf41fdab8",
-                    "type": "modifier",
-                    "name": "Can't wear armor",
-                    "reference": "B47",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "9ad2a005-947f-4ef9-ba99-ed88a4adaa49",
-                    "type": "modifier",
-                    "name": "Directional",
-                    "reference": "B47",
-                    "notes": "@Direction: Back, Right, Left, Top or Underside@",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "34ffce90-cba0-4d1a-a8ce-b3e6b12a51e3",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Common Attack Form@",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "10940926-bf24-4984-a984-d974384f0874",
-                    "type": "modifier",
-                    "name": "Tough Skin",
-                    "notes": "Effects that just require skin contact or a scratch ignore this DR",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "db046fce-bac2-4fae-98d4-ee66925c0e9e",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Occasional Attack Form@",
-                    "cost": -60,
-                    "disabled": true
-                },
-                {
-                    "id": "b112e7ab-adac-40ef-a544-598ae0f7436f",
-                    "type": "modifier",
-                    "name": "Ablative",
-                    "reference": "B47",
-                    "cost": -80,
-                    "disabled": true
-                },
-                {
-                    "id": "3b761122-5da1-46dd-992c-2f9df40890cb",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Rare Attack Form@",
-                    "cost": -80,
-                    "disabled": true
-                },
-                {
-                    "id": "0ed89045-94df-4ab0-ac26-53103a2ad43f",
-                    "type": "modifier",
-                    "name": "Laminate",
-                    "reference": "RSWL18",
-                    "cost": 10,
-                    "disabled": true
-                },
-                {
-                    "id": "a1baddab-14e3-402e-a209-1eee48ba98ec",
-                    "type": "modifier",
-                    "name": "Malediction-Proof",
-                    "reference": "PSI14",
-                    "cost": 50,
-                    "disabled": true
-                },
-                {
-                    "id": "b1b407f3-24ca-4beb-8f3a-d362891e5af9",
-                    "type": "modifier",
-                    "name": "Maledictions Only",
-                    "reference": "PSI14",
-                    "disabled": true
-                },
-                {
-                    "id": "a48b115e-bf63-41f8-84cd-3b6d1e41653e",
-                    "type": "modifier",
-                    "name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
-                    "reference": "B47",
-                    "cost": -10,
-                    "disabled": true
-                }
-            ],
-            "levels": 11,
-            "points_per_level": 5,
-            "features": [
-                {
-                    "type": "dr_bonus",
-                    "location": "skull",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "face",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "neck",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "torso",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "vitals",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "groin",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "arm",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "hand",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "leg",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "foot",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "tail",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "wing",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "fin",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "brain",
-                    "amount": 1,
-                    "per_level": true
-                }
-            ],
-            "can_level": true,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "55d95391-26fa-4156-b0fb-cf71e5bff6d3",
-            "type": "trait",
-            "name": "Damage Resistance (0.5x)",
-            "notes": "Limited (Cold)",
-            "userdesc": "Half All Damage That Passed DR",
-            "base_points": 20,
-            "calc": {
-                "points": 20
-            }
-        },
-        {
-            "id": "d29a7614-2dc2-49c4-89bc-d2af641fdcc8",
-            "type": "trait",
-            "name": "Damage Resistance (0.5x)",
-            "notes": "Limited (Fire)",
-            "userdesc": "Half All Damage That Passed DR",
-            "base_points": 20,
-            "calc": {
-                "points": 20
-            }
-        },
-        {
-            "id": "ef487deb-a971-444f-9e4c-bd715cbb9479",
-            "type": "trait",
-            "name": "Damage Resistance (0.5x)",
-            "notes": "Limited (Lightning)",
-            "userdesc": "Half All Damage That Passed DR",
-            "base_points": 20,
-            "calc": {
-                "points": 20
-            }
-        },
-        {
-            "id": "4a8d2942-c984-4b42-83bf-ea016616d57d",
-            "type": "trait",
-            "name": "Damage Immunity",
-            "notes": "Limited (Poison)",
-            "base_points": 50,
-            "calc": {
-                "points": 50
-            }
-        },
-        {
-            "id": "0225f414-f08f-4085-86ef-519ef598be7d",
-            "type": "trait",
-            "name": "Legendary Resistance (3/Day)",
-            "notes": "If Demogorgon fails a saving throw, he can choose to succeed instead.",
+            "name": "Reach",
+            "notes": "The tentacle can reach anywhere in the room.",
             "base_points": 5,
             "calc": {
                 "points": 5
             }
         },
         {
-            "id": "6fc8811b-04bf-4c44-a13c-6b228cce93cf",
-            "type": "trait",
-            "name": "Magic Resistance",
-            "notes": "Demogorgon has +3 on saving throws against spells and other magical effects.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "0327ddc3-8e82-45ea-98a4-77146f052c8a",
-            "type": "trait",
-            "name": "Two Heads",
-            "notes": "Demogorgon has +3 on saving throws against being blinded, deafened, stunned, or knocked unconscious.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "640a4b46-a94d-42cc-afac-e60f228a864e",
-            "type": "trait",
-            "name": "Spellcasting",
-            "notes": "Demogorgon casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 23}):\nAt Will: ['detect magic', 'major image']\nDaily: {'3e': ['dispel magic', 'fear', 'telekinesis'], '1e': ['feeblemind', 'project image']}",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "9947ebe8-d267-410c-aea0-9b5481220573",
+            "id": "34b08c43-29ae-4007-b6b1-2a827c4dd254",
             "type": "action",
-            "name": "Multiattack",
-            "notes": "Demogorgon makes two Tentacle attacks. He can replace one attack with a use of Gaze.",
+            "name": "Constrict",
+            "notes": "Melee Weapon Attack, DC 11 to hit, reach 35 ft., one creature. 2d bludgeoning damage, and the target is grappled (escape {@dc 16}). Until this grapple ends, the creature is restrained, and the tentacle can't constrict another target.",
             "base_points": 5,
             "calc": {
                 "points": 5
             }
         },
         {
-            "id": "94576f13-c3b2-48ae-abdf-c12139513579",
-            "type": "action",
-            "name": "Tentacle",
-            "notes": "Melee Weapon Attack, DC 18 to hit, reach 10 ft., one target. 4d + 2 force damage. If the target is a creature, it must succeed on a HT - 5 roll, or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "c28c20a3-8485-445c-9cbc-e56e214b75db",
-            "type": "action",
-            "name": "Gaze",
-            "notes": "Demogorgon turns his magical gaze toward one creature he can see within 120 feet of him. The target must succeed on a WL - 5 roll or suffer one of the following effects (choose one or roll a {@dice d6}):",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "d25fc516-3248-4dfe-9c5c-41ca8c2eddda",
-            "type": "action",
-            "name": "Gaze",
-            "notes": "For 1 fp, the following can be done following the turn of another creature. Demogorgon uses Gaze and must use either Beguiling Gaze or Confusing Gaze.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "338e1167-0dd2-4131-9332-b4a8fa119828",
-            "type": "action",
-            "name": "Tail",
-            "notes": "For 1 fp, the following can be done following the turn of another creature. Melee Weapon Attack, DC 18 to hit, reach 15 ft., one target. 3d bludgeoning damage plus 2d - 1 necrotic damage.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "1b0f38e1-3a78-4935-8297-f94557f825cb",
-            "type": "action",
-            "name": "Cast a Spell (Costs 2 Actions)",
-            "notes": "For 1 fp, the following can be done following the turn of another creature. Demogorgon uses Spellcasting.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "1a5c06ab-1c02-4cbb-9a41-19e1d04d2c4e",
+            "id": "21f03695-1dfb-4221-b706-a763869b007a",
             "type": "trait",
-            "name": "True Sight",
-            "userdesc": "Can see normally in magical and nonmagical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceive the original form of a shapechanger or a creature that is transformed by magic. Within 120 ft.",
-            "base_points": 60,
+            "name": "Blindsight",
+            "userdesc": "Can perceive its surroundings without relying on sight, within 60 ft.",
+            "base_points": 40,
             "calc": {
-                "points": 60
-            }
-        },
-        {
-            "id": "3600c3dd-7658-4b26-8d73-3c555aa28483",
-            "type": "trait",
-            "name": "all",
-            "reference": "B24",
-            "tags": [
-                "Advantage",
-                "Language",
-                "Mental"
-            ],
-            "modifiers": [
-                {
-                    "id": "ff972d9a-b925-4895-a489-f3d14999074d",
-                    "type": "modifier",
-                    "name": "Native",
-                    "reference": "B23",
-                    "cost": -6,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "e9f38c71-c4bd-45ee-a5e2-b47a33029f96",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "None",
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "6cd10ab4-c4f9-4764-a47d-0e77d105d862",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Broken",
-                    "cost": 1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "3c7caa3c-055e-4422-ac8e-6a2d632b391c",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Accented",
-                    "cost": 2,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "231ba28d-11ce-44e1-8d23-074d40ca57c6",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Native",
-                    "cost": 3,
-                    "cost_type": "points"
-                },
-                {
-                    "id": "152ad20b-dc58-4abb-b256-71da14dbb89c",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "None",
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "6304a0d6-80f3-4a5f-b3cc-3ba2ae0c8063",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Broken",
-                    "cost": 1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "5818ab4a-2c4b-4c3e-a711-c4b6332daaca",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Accented",
-                    "cost": 2,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "1b77515e-5789-49a0-8238-7242900c8c2c",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Native",
-                    "cost": 3,
-                    "cost_type": "points"
-                }
-            ],
-            "calc": {
-                "points": 6
-            }
-        },
-        {
-            "id": "f782eecc-3dff-4fd0-a006-487cc86ffcc0",
-            "type": "trait",
-            "name": "telepathy 120 ft.",
-            "reference": "B24",
-            "tags": [
-                "Advantage",
-                "Language",
-                "Mental"
-            ],
-            "modifiers": [
-                {
-                    "id": "ff972d9a-b925-4895-a489-f3d14999074d",
-                    "type": "modifier",
-                    "name": "Native",
-                    "reference": "B23",
-                    "cost": -6,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "e9f38c71-c4bd-45ee-a5e2-b47a33029f96",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "None",
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "6cd10ab4-c4f9-4764-a47d-0e77d105d862",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Broken",
-                    "cost": 1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "3c7caa3c-055e-4422-ac8e-6a2d632b391c",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Accented",
-                    "cost": 2,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "231ba28d-11ce-44e1-8d23-074d40ca57c6",
-                    "type": "modifier",
-                    "name": "Spoken",
-                    "reference": "B24",
-                    "notes": "Native",
-                    "cost": 3,
-                    "cost_type": "points"
-                },
-                {
-                    "id": "152ad20b-dc58-4abb-b256-71da14dbb89c",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "None",
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "6304a0d6-80f3-4a5f-b3cc-3ba2ae0c8063",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Broken",
-                    "cost": 1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "5818ab4a-2c4b-4c3e-a711-c4b6332daaca",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Accented",
-                    "cost": 2,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "1b77515e-5789-49a0-8238-7242900c8c2c",
-                    "type": "modifier",
-                    "name": "Written",
-                    "reference": "B24",
-                    "notes": "Native",
-                    "cost": 3,
-                    "cost_type": "points"
-                }
-            ],
-            "calc": {
-                "points": 6
+                "points": 40
             }
         }
     ],
     "skills": [
         {
-            "id": "673746af-1b9e-4ccb-bcf2-ea62bd1eeffe",
-            "type": "skill",
-            "name": "Diplomacy",
-            "reference": "B187",
-            "tags": [
-                "Business",
-                "Police",
-                "Social"
-            ],
-            "difficulty": "iq/h",
-            "points": 24,
-            "defaulted_from": {
-                "type": "iq",
-                "modifier": -6,
-                "level": 9,
-                "adjusted_level": 9,
-                "points": -9
-            },
-            "defaults": [
-                {
-                    "type": "iq",
-                    "modifier": -6
-                },
-                {
-                    "type": "skill",
-                    "name": "Politics",
-                    "modifier": -6
-                }
-            ],
-            "calc": {
-                "level": 13,
-                "rsl": "IQ-2"
-            }
-        },
-        {
-            "id": "1910df93-c145-42c4-a2d0-2e7a56aa84f6",
-            "type": "skill",
-            "name": "Fast-Talk",
-            "reference": "B195",
-            "tags": [
-                "Criminal",
-                "Social",
-                "Spy",
-                "Street"
-            ],
-            "difficulty": "iq/a",
-            "points": 24,
-            "defaulted_from": {
-                "type": "iq",
-                "modifier": -5,
-                "level": 10,
-                "adjusted_level": 10,
-                "points": -10
-            },
-            "defaults": [
-                {
-                    "type": "iq",
-                    "modifier": -5
-                },
-                {
-                    "type": "skill",
-                    "name": "Acting",
-                    "modifier": -5
-                }
-            ],
-            "calc": {
-                "level": 15,
-                "rsl": "IQ+0"
-            }
-        },
-        {
-            "id": "b2ae457f-763f-4628-bad0-c08a32154ef2",
-            "type": "skill",
-            "name": "Detect Lies",
-            "reference": "B187",
-            "tags": [
-                "Police",
-                "Social",
-                "Spy"
-            ],
-            "difficulty": "per/h",
-            "points": 28,
-            "defaulted_from": {
-                "type": "per",
-                "modifier": -6,
-                "level": 9,
-                "adjusted_level": 9,
-                "points": -9
-            },
-            "defaults": [
-                {
-                    "type": "per",
-                    "modifier": -6
-                },
-                {
-                    "type": "skill",
-                    "name": "Body Language",
-                    "modifier": -4
-                },
-                {
-                    "type": "skill",
-                    "name": "Psychology",
-                    "modifier": -4
-                }
-            ],
-            "calc": {
-                "level": 13,
-                "rsl": "Per-2"
-            }
-        },
-        {
-            "id": "bdaef6df-9fc9-47d0-8f0b-b4cc1a1838d5",
+            "id": "2982d336-d792-411b-b9c9-97d9c04dd3f2",
             "type": "skill",
             "name": "Observation",
             "reference": "B211",
@@ -1613,7 +761,7 @@
                 "Street"
             ],
             "difficulty": "per/a",
-            "points": 28,
+            "points": 2,
             "defaulted_from": {
                 "type": "per",
                 "modifier": -5,

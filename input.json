@@ -1,251 +1,69 @@
 {
-  "name": "Demogorgon",
-  "isNamedCreature": true,
-  "source": "MPMM",
-  "page": 90,
-  "otherSources": [
-    {
-      "source": "MTF",
-      "page": 144
-    }
-  ],
-  "size": [
-    "H"
-  ],
-  "type": {
-    "type": "fiend",
-    "tags": [
-      "demon"
-    ]
-  },
-  "alignment": [
-    "C",
-    "E"
-  ],
-  "ac": [
-    {
-      "ac": 22,
-      "from": [
-        "natural armor"
-      ]
-    }
-  ],
-  "hp": {
-    "average": 464,
-    "formula": "32d12 + 256"
-  },
-  "speed": {
-    "walk": 50,
-    "swim": 50
-  },
-  "str": 29,
-  "dex": 14,
-  "con": 26,
-  "int": 20,
-  "wis": 17,
-  "cha": 25,
-  "save": {
-    "dex": "+10",
-    "con": "+16",
-    "wis": "+11",
-    "cha": "+15"
-  },
-  "skill": {
-    "insight": "+11",
-    "perception": "+19"
-  },
-  "senses": [
-    "truesight 120 ft."
-  ],
-  "passive": 29,
-  "resist": [
-    "cold",
-    "fire",
-    "lightning"
-  ],
-  "immune": [
-    "poison",
-    {
-      "immune": [
-        "bludgeoning",
-        "piercing",
-        "slashing"
-      ],
-      "note": "from nonmagical attacks",
-      "cond": true
-    }
-  ],
-  "conditionImmune": [
-    "charmed",
-    "exhaustion",
-    "frightened",
-    "poisoned"
-  ],
-  "languages": [
-    "all",
-    "telepathy 120 ft."
-  ],
-  "cr": "26",
-  "spellcasting": [
-    {
-      "name": "Spellcasting",
-      "headerEntries": [
-        "Demogorgon casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 23}):"
-      ],
-      "will": [
-        "{@spell detect magic}",
-        "{@spell major image}"
-      ],
-      "daily": {
-        "3e": [
-          "{@spell dispel magic}",
-          "{@spell fear}",
-          "{@spell telekinesis}"
-        ],
-        "1e": [
-          "{@spell feeblemind}",
-          "{@spell project image}"
-        ]
-      },
-      "ability": "cha",
-      "displayAs": "action",
-      "type": "spellcasting"
-    }
-  ],
+  "name": "Enormous Tentacle",
+  "source": "OoW",
+  "page": 94,
   "trait": [
     {
-      "name": "Legendary Resistance (3/Day)",
+      "name": "Reach",
       "entries": [
-        "If Demogorgon fails a saving throw, he can choose to succeed instead."
-      ]
-    },
-    {
-      "name": "Magic Resistance",
-      "entries": [
-        "Demogorgon has advantage on saving throws against spells and other magical effects."
-      ]
-    },
-    {
-      "name": "Two Heads",
-      "entries": [
-        "Demogorgon has advantage on saving throws against being {@condition blinded}, {@condition deafened}, {@condition stunned}, or knocked {@condition unconscious}."
+        "The tentacle can reach anywhere in the room."
       ]
     }
   ],
   "action": [
     {
-      "name": "Multiattack",
+      "name": "Constrict",
       "entries": [
-        "Demogorgon makes two Tentacle attacks. He can replace one attack with a use of Gaze."
-      ]
-    },
-    {
-      "name": "Tentacle",
-      "entries": [
-        "{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}28 ({@damage 3d12 + 9}) force damage. If the target is a creature, it must succeed on a {@dc 23} Constitution saving throw, or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
-      ]
-    },
-    {
-      "name": "Gaze",
-      "entries": [
-        "Demogorgon turns his magical gaze toward one creature he can see within 120 feet of him. The target must succeed on a {@dc 23} Wisdom saving throw or suffer one of the following effects (choose one or roll a {@dice d6}):",
-        {
-          "type": "list",
-          "style": "list-hang-notitle",
-          "items": [
-            {
-              "type": "item",
-              "name": "1–2: Beguiling Gaze",
-              "entries": [
-                "The target is {@condition stunned} until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight."
-              ]
-            },
-            {
-              "type": "item",
-              "name": "3–4: Confusing Gaze",
-              "entries": [
-                "The target suffers the effect of the {@spell confusion} spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell."
-              ]
-            },
-            {
-              "type": "item",
-              "name": "5–6: Hypnotic Gaze",
-              "entries": [
-                "The target is {@condition charmed} by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the {@condition charmed} target uses its action, reaction, and movement."
-              ]
-            }
-          ]
-        }
+        "{@atk mw} {@hit 6} to hit, reach 35 ft., one creature. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 16}). Until this grapple ends, the creature is {@condition restrained}, and the tentacle can't constrict another target."
       ]
     }
-  ],
-  "legendaryActions": 2,
-  "legendary": [
-    {
-      "name": "Gaze",
-      "entries": [
-        "Demogorgon uses Gaze and must use either Beguiling Gaze or Confusing Gaze."
-      ]
-    },
-    {
-      "name": "Tail",
-      "entries": [
-        "{@atk mw} {@hit 17} to hit, reach 15 ft., one target. {@h}20 ({@damage 2d10 + 9}) bludgeoning damage plus 11 ({@damage 2d10}) necrotic damage."
-      ]
-    },
-    {
-      "name": "Cast a Spell (Costs 2 Actions)",
-      "entries": [
-        "Demogorgon uses Spellcasting."
-      ]
-    }
-  ],
-  "legendaryGroup": {
-    "name": "Demogorgon",
-    "source": "MPMM"
-  },
-  "traitTags": [
-    "Legendary Resistances",
-    "Magic Resistance"
-  ],
-  "senseTags": [
-    "U"
-  ],
-  "actionTags": [
-    "Multiattack",
-    "Tentacles"
-  ],
-  "languageTags": [
-    "TP",
-    "XX"
   ],
   "damageTags": [
-    "B",
-    "N",
-    "O"
-  ],
-  "damageTagsSpell": [
-    "Y"
-  ],
-  "spellcastingTags": [
-    "O"
-  ],
-  "miscTags": [
-    "HPR",
-    "MW",
-    "RCH"
+    "B"
   ],
   "conditionInflict": [
-    "charmed",
-    "stunned"
-  ],
-  "conditionInflictSpell": [
-    "blinded",
-    "deafened",
-    "frightened",
+    "grappled",
     "restrained"
   ],
   "hasToken": true,
-  "hasFluff": true,
-  "hasFluffImages": true
+  "hasFluffImages": true,
+  "size": [
+    "H"
+  ],
+  "type": "beast",
+  "alignment": [
+    "U"
+  ],
+  "ac": [
+    12
+  ],
+  "hp": {
+    "average": 60,
+    "formula": "8d12 + 8"
+  },
+  "speed": {
+    "walk": 30,
+    "swim": 30
+  },
+  "str": 19,
+  "dex": 14,
+  "con": 12,
+  "int": 1,
+  "wis": 10,
+  "cha": 3,
+  "skill": {
+    "perception": "+2"
+  },
+  "senses": [
+    "blindsight 10 ft."
+  ],
+  "passive": 12,
+  "cr": "2",
+  "senseTags": [
+    "B"
+  ],
+  "miscTags": [
+    "MW",
+    "RCH"
+  ]
 }
