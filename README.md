@@ -1,6 +1,6 @@
 # dndGURPsConverter
 
-This converter automatically converts json files from 5e.tools (Dungeons and Dragons 5e statblocks) to .gcs files for GURPs Character Sheet. 
+This converter automatically converts json files from Dungeons and Dragons 5e statblocks to .gcs files for GURPs Character Sheet. 
 
 This is a rough conversion, it probably won't be exactly right and should be edited. In particular, health calculations are off.
 
@@ -8,7 +8,7 @@ Let me know of any issues. There are some discrepencies between json files. Some
 
 # Instructions
 1. Clone github repo
-2. Go to 5e.tools. Find the monster you want to clone. Click Open Pop-Up in the top right corner of the statblock. Click the *{}* button and click copy code.
+2. Go to your source of statblocks for 5e. Find the monster you want to clone. Click Open Pop-Up in the top right corner of the statblock. Click the *{}* button and click copy code.
 3. Paste code into *input.json*
 4. Run *converter.py*
 5. Types yes or no if you want the character to have combat reflexes or not
