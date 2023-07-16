@@ -1,69 +1,183 @@
 {
-  "name": "Enormous Tentacle",
-  "source": "OoW",
-  "page": 94,
+  "source": "ToB3",
+  "page": 191,
+  "name": "Mulcher",
+  "group": [
+    "Fungi"
+  ],
+  "size": [
+    "G"
+  ],
+  "type": "plant",
+  "alignment": [
+    "U"
+  ],
+  "ac": [
+    {
+      "ac": 15,
+      "from": [
+        "natural armor"
+      ]
+    }
+  ],
+  "hp": {
+    "formula": "9d20 + 45",
+    "average": 139
+  },
+  "speed": {
+    "walk": 10,
+    "burrow": 30
+  },
+  "str": 18,
+  "dex": 6,
+  "con": 20,
+  "int": 4,
+  "wis": 10,
+  "cha": 1,
+  "skill": {
+    "perception": "+3",
+    "stealth": "+4"
+  },
+  "conditionImmune": [
+    "blinded",
+    "deafened",
+    "frightened",
+    "prone"
+  ],
+  "senses": [
+    "blindsight 120 ft. (blind beyond this radius)"
+  ],
+  "passive": 13,
+  "senseTags": [
+    "B"
+  ],
+  "cr": "6",
   "trait": [
     {
-      "name": "Reach",
+      "name": "Central Stalk Weakness",
       "entries": [
-        "The tentacle can reach anywhere in the room."
+        "The mulcher's central stalk lies hidden within the mulcher's fungal mass. When exposed, the central stalk can be attacked and destroyed (AC 13; hp 50; vulnerability to acid, cold, and fire damage). If the central stalk is destroyed, the mulcher has disadvantage on attack rolls and can't use Expose Stalk until it regrows a new central stalk at the end of its next long rest."
+      ]
+    },
+    {
+      "name": "Disturbed Soil (Exposed Stalk Only)",
+      "entries": [
+        "The ground within 20 feet of the mulcher is difficult terrain."
+      ]
+    },
+    {
+      "name": "Mulcher Pit",
+      "entries": [
+        "If the mulcher burrows at least 20 feet straight toward a creature, it can dig a 10-foot diameter, 20-foot-deep pit beneath the creature. Each Large or smaller creature in the pit's area must succeed on a {@dc 15} Dexterity saving throw or fall into the mycelium-lined pit and land {@condition prone}, taking 14 ({@damage 4d6}) piercing damage from the spiked mycelium in addition to any falling damage. The mulcher can make one Mycelium Spike attack against a {@condition prone} creature in the pit as a bonus action."
+      ]
+    },
+    {
+      "name": "Stalk Regeneration (Exposed Stalk Only)",
+      "entries": [
+        "The mulcher gains 15 hp at the start of its turn if it has at least 1 hp."
       ]
     }
   ],
   "action": [
     {
-      "name": "Constrict",
+      "name": "Multiattack",
       "entries": [
-        "{@atk mw} {@hit 6} to hit, reach 35 ft., one creature. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 16}). Until this grapple ends, the creature is {@condition restrained}, and the tentacle can't constrict another target."
+        "The mulcher makes two Mycelium Spike attacks. Mycelium Spike. Melee Weapon {@action Attack}: {@hit 7} to hit, reach 15 ft., one target. Hit: 15 ({@damage 2d10 + 4}) piercing damage, and the target must succeed on a {@dc 15} Strength saving throw or be {@condition grappled} (escape {@dc 15}) if the mulcher doesn't have two other creatures {@condition grappled}."
+      ]
+    },
+    {
+      "name": "Excavate",
+      "entries": [
+        "While underground, the mulcher creates a 20-foot square cover on the ground over itself and lurks just below the surface. The cover is identical to the ground around it. When a creature enters the cover's space, the mulcher can make one Mycelium Spike attack against the creature as a reaction, destroying the cover. The target has disadvantage on the saving throw to avoid being {@condition grappled}."
       ]
     }
   ],
+  "bonus": [
+    {
+      "name": "Expose Stalk",
+      "entries": [
+        "The mulcher exposes its central stalk above the ground until the end of its next turn or until it ends the effect as a bonus action. While the central stalk is exposed, the mulcher can't burrow."
+      ]
+    },
+    {
+      "name": "Rapid Burrow",
+      "entries": [
+        "The mulcher burrows up to 60 feet. {@action Opportunity attack||Opportunity attacks} against it are made with disadvantage when the mulcher burrows out of an enemy's reach in this way. Creatures {@condition grappled} by it are freed before it burrows."
+      ]
+    }
+  ],
+  "reaction": [
+    {
+      "name": "Emergent Stalk",
+      "entries": [
+        "When the mulcher is reduced to below half its hp maximum or when a creature scores a critical hit against it, the mulcher immediately uses Expose Stalk."
+      ]
+    }
+  ],
+  "actionTags": [
+    "Multiattack"
+  ],
   "damageTags": [
-    "B"
+    "P"
   ],
   "conditionInflict": [
-    "grappled",
-    "restrained"
+    "grappled"
   ],
-  "hasToken": true,
-  "hasFluffImages": true,
-  "size": [
-    "H"
+  "environment": [
+    "farmland",
+    "forest",
+    "hill"
   ],
-  "type": "beast",
-  "alignment": [
-    "U"
-  ],
-  "ac": [
-    12
-  ],
-  "hp": {
-    "average": 60,
-    "formula": "8d12 + 8"
+  "fluff": {
+    "entries": [
+      {
+        "type": "entries",
+        "entries": [
+          {
+            "type": "entries",
+            "entries": [
+              {
+                "type": "quote",
+                "entries": [
+                  "The large orange flower reveals a tall, blue stalk. The petals clamp on a swarm of insects, showing their fleshy, tooth-like nature."
+                ]
+              },
+              "A voracious fungus, the mulcher hides within topsoil, waiting to trap oblivious creatures.",
+              {
+                "type": "entries",
+                "name": "Hidden Danger",
+                "entries": [
+                  "This massive fungus is as sweeping and bulky as a {@creature dragon turtle}. It uses the ground as cover, where it can ambush prey that travels above it. Alternatively, it can trigger pit traps beneath its prey, impaling the falling creatures on its spike-like mycelium. Once prey has been impaled, the fungus drinks in the victim's blood as greedily as groundwater."
+                ]
+              },
+              {
+                "type": "entries",
+                "name": "Weak Spot",
+                "entries": [
+                  "When injured or when it fails to capture sufficient food, the mulcher pushes its fragile central stalk to the surface, releasing insect-attracting pheromones to gain some quick nutrients from the meager prey."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "images": [
+      {
+        "type": "image",
+        "href": {
+          "type": "external",
+          "url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/Duskwilt.webp"
+        }
+      }
+    ]
   },
-  "speed": {
-    "walk": 30,
-    "swim": 30
-  },
-  "str": 19,
-  "dex": 14,
-  "con": 12,
-  "int": 1,
-  "wis": 10,
-  "cha": 3,
-  "skill": {
-    "perception": "+2"
-  },
-  "senses": [
-    "blindsight 10 ft."
-  ],
-  "passive": 12,
-  "cr": "2",
-  "senseTags": [
-    "B"
-  ],
-  "miscTags": [
-    "MW",
-    "RCH"
+  "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/token/Duskwilt.webp",
+  "altArt": [
+    {
+      "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/token2/Mulcher.webp",
+      "name": "Red border",
+      "source": "ToB3"
+    }
   ]
 }
