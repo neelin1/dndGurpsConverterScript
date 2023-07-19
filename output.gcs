@@ -12,10 +12,10 @@
     ],
     "profile": {
         "player_name": "Zane Neelin",
-        "name": "Mulcher",
+        "name": "Gibbering Mouther",
         "handedness": "Right",
         "tech_level": "4",
-        "SM": 4
+        "SM": 0
     },
     "settings": {
         "page": {
@@ -461,18 +461,18 @@
     "attributes": [
         {
             "attr_id": "st",
-            "adj": 7,
+            "adj": 0,
             "calc": {
-                "value": 14,
-                "points": 40
+                "value": 10,
+                "points": 0
             }
         },
         {
             "attr_id": "dx",
-            "adj": -2,
+            "adj": -1,
             "calc": {
-                "value": 8,
-                "points": -40
+                "value": 9,
+                "points": -20
             }
         },
         {
@@ -485,10 +485,10 @@
         },
         {
             "attr_id": "ht",
-            "adj": 5,
+            "adj": 3,
             "calc": {
-                "value": 15,
-                "points": 50
+                "value": 13,
+                "points": 30
             }
         },
         {
@@ -574,7 +574,7 @@
         },
         {
             "attr_id": "hp",
-            "adj": 30,
+            "adj": 0,
             "calc": {
                 "value": 10,
                 "current": 10,
@@ -693,7 +693,7 @@
             }
         },
         {
-            "id": "1afd8c45-6e39-42ac-aa06-558871b2c48c",
+            "id": "d657925e-a6ec-46af-bac9-b74eac165dc6",
             "type": "trait",
             "name": "High Pain Threshold",
             "reference": "B59",
@@ -720,104 +720,60 @@
             }
         },
         {
-            "id": "e36a16e5-aba0-41d3-89a6-8825eb72565a",
+            "id": "e031f47c-2fde-414e-bf77-b6e2465a0055",
             "type": "trait",
-            "name": "Acute Vision",
-            "reference": "B35",
-            "tags": [
-                "Advantage",
-                "Physical"
-            ],
-            "levels": 3,
-            "points_per_level": 2,
-            "features": [
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "vision",
-                    "amount": 1,
-                    "per_level": true
-                }
-            ],
-            "can_level": true,
+            "name": "Aberrant Ground",
+            "notes": "The ground in a 10-foot radius around the mouther is doughlike {@quickref difficult terrain||3}. Each creature that starts its turn in that area must succeed on a ST - 0 roll or have its speed reduced to 0 until the start of its next turn.",
+            "base_points": 5,
             "calc": {
-                "points": 2
+                "points": 5
             }
         },
         {
-            "id": "26032003-ef99-4135-82f1-4947af69db0d",
+            "id": "49d6207a-e7ff-4e27-aab8-7267bb3d5b06",
             "type": "trait",
-            "name": "Combat Reflexes",
-            "reference": "B43",
-            "notes": "Never freeze",
-            "tags": [
-                "Advantage",
-                "Mental"
-            ],
-            "base_points": 15,
-            "prereqs": {
-                "type": "prereq_list",
-                "all": true,
-                "prereqs": [
-                    {
-                        "type": "trait_prereq",
-                        "has": false,
-                        "name": {
-                            "compare": "is",
-                            "qualifier": "Enhanced Time Sense"
-                        }
-                    }
-                ]
-            },
-            "features": [
-                {
-                    "type": "skill_bonus",
-                    "selection_type": "skills_with_name",
-                    "name": {
-                        "compare": "starts_with",
-                        "qualifier": "fast-draw"
-                    },
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "dodge",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "parry",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "block",
-                    "amount": 1
-                },
-                {
-                    "type": "attribute_bonus",
-                    "attribute": "fright_check",
-                    "amount": 2
-                },
-                {
-                    "type": "conditional_modifier",
-                    "situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
-                    "amount": 6
-                },
-                {
-                    "type": "conditional_modifier",
-                    "situation": "to initiative rolls for your side (+2 if you are the leader)",
-                    "amount": 1
-                }
-            ],
+            "name": "Gibbering",
+            "notes": "The mouther babbles incoherently while it can see any creature and isn't incapacitated. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a WL - 0 roll. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.",
+            "base_points": 5,
             "calc": {
-                "points": 15
+                "points": 5
             }
         },
         {
-            "id": "85ec1111-8672-4ac1-a970-bc009391b55d",
+            "id": "57f172c2-3f31-40bc-990f-7d4652efc5fd",
+            "type": "action",
+            "name": "Multiattack",
+            "notes": "The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle.",
+            "base_points": 5,
+            "calc": {
+                "points": 5
+            }
+        },
+        {
+            "id": "fcdd30e9-9fba-4ed0-821c-5fef740d56dd",
+            "type": "action",
+            "name": "Bites",
+            "notes": "Melee Weapon Attack, DC 10 to hit, reach 5 ft., one creature. 3d - 1 piercing damage. If the target is Medium or smaller, it must succeed on a ST - 0 roll or be knocked prone. If the target is killed by this damage, it is absorbed into the mouther.",
+            "base_points": 5,
+            "calc": {
+                "points": 5
+            }
+        },
+        {
+            "id": "07c44edb-7aa0-416a-a1c6-c412c6b88569",
+            "type": "action",
+            "name": "Blinding Spittle {@recharge 5}",
+            "notes": "The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DX - 1 roll or be blinded until the end of the mouther's next turn.",
+            "base_points": 5,
+            "calc": {
+                "points": 5
+            }
+        },
+        {
+            "id": "5fe9427a-8ec8-4bb4-b501-5248a6a0a812",
             "type": "trait",
-            "name": "Damage Resistance",
-            "reference": "B47,P45,MA43,PSI14",
+            "name": "Dark Vision",
+            "reference": "B47,P46",
             "tags": [
                 "Advantage",
                 "Exotic",
@@ -825,489 +781,28 @@
             ],
             "modifiers": [
                 {
-                    "id": "71e0ea7a-bb0e-409d-b01d-aa247b4e66f6",
+                    "id": "d8886d7f-b079-4e07-9f7a-749f509e1bc0",
                     "type": "modifier",
-                    "name": "Force Field",
-                    "reference": "B47",
+                    "name": "Can see colors in the dark",
                     "cost": 20,
                     "disabled": true
                 },
                 {
-                    "id": "a5e89aca-0b61-483e-8ae3-d6086856cf9a",
+                    "id": "f515b6a5-62d7-4105-9622-ffc131556f64",
                     "type": "modifier",
-                    "name": "Hardened",
-                    "reference": "B47",
-                    "cost": 20,
-                    "levels": 1,
-                    "disabled": true
-                },
-                {
-                    "id": "0377b71f-5bfe-44a7-b1a0-db38c7952845",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Enhances @Trait@",
-                    "cost": 80,
-                    "disabled": true
-                },
-                {
-                    "id": "db27da09-5815-4776-9af9-6d9741d8e52a",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Healing only",
-                    "cost": 80,
-                    "disabled": true
-                },
-                {
-                    "id": "0e4c391b-1076-40f2-92b6-c5d3c60b78fd",
-                    "type": "modifier",
-                    "name": "Absorption",
-                    "reference": "B46",
-                    "notes": "Enhances any trait",
-                    "cost": 100,
-                    "disabled": true
-                },
-                {
-                    "id": "8b422514-296a-4b7c-b350-6b7e7d2be0e9",
-                    "type": "modifier",
-                    "name": "Reflection",
-                    "reference": "B47",
-                    "cost": 100,
-                    "disabled": true
-                },
-                {
-                    "id": "419ab96d-ea87-4894-b6d8-a6ee32a5d416",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Rare@",
-                    "cost": -1,
-                    "cost_type": "points",
-                    "disabled": true
-                },
-                {
-                    "id": "a8c6d43d-430e-4773-a64c-200f75009e65",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Occasional@",
-                    "cost": -5,
-                    "disabled": true
-                },
-                {
-                    "id": "e9503abd-7621-42c4-8ced-3981ec7c6d9a",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Common@",
-                    "cost": -10,
-                    "disabled": true
-                },
-                {
-                    "id": "1585a884-94e2-4152-b7b7-d3b6cc253c58",
-                    "type": "modifier",
-                    "name": "Bane",
-                    "reference": "H14",
-                    "notes": "@Very Common@",
-                    "cost": -15,
-                    "disabled": true
-                },
-                {
-                    "id": "131c5627-2f5a-4f3f-8a52-08417003bc95",
-                    "type": "modifier",
-                    "name": "Directional",
-                    "reference": "B47",
-                    "notes": "Front",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "132e7d43-7920-45f5-bcde-036029aa49f2",
-                    "type": "modifier",
-                    "name": "Flexible",
-                    "reference": "B47",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "d9e01c00-3ac2-4f4d-ae5f-45b34441df13",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Very Common Attack Form@",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "72f08aac-bc4a-43fe-875b-8747b7397bec",
-                    "type": "modifier",
-                    "name": "Semi-Ablative",
-                    "reference": "B47",
-                    "cost": -20,
-                    "disabled": true
-                },
-                {
-                    "id": "13410164-cee1-4956-832c-47bcf41fdab8",
-                    "type": "modifier",
-                    "name": "Can't wear armor",
-                    "reference": "B47",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "9ad2a005-947f-4ef9-ba99-ed88a4adaa49",
-                    "type": "modifier",
-                    "name": "Directional",
-                    "reference": "B47",
-                    "notes": "@Direction: Back, Right, Left, Top or Underside@",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "34ffce90-cba0-4d1a-a8ce-b3e6b12a51e3",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Common Attack Form@",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "10940926-bf24-4984-a984-d974384f0874",
-                    "type": "modifier",
-                    "name": "Tough Skin",
-                    "notes": "Effects that just require skin contact or a scratch ignore this DR",
-                    "cost": -40,
-                    "disabled": true
-                },
-                {
-                    "id": "db046fce-bac2-4fae-98d4-ee66925c0e9e",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Occasional Attack Form@",
-                    "cost": -60,
-                    "disabled": true
-                },
-                {
-                    "id": "b112e7ab-adac-40ef-a544-598ae0f7436f",
-                    "type": "modifier",
-                    "name": "Ablative",
-                    "reference": "B47",
-                    "cost": -80,
-                    "disabled": true
-                },
-                {
-                    "id": "3b761122-5da1-46dd-992c-2f9df40890cb",
-                    "type": "modifier",
-                    "name": "Limited",
-                    "reference": "B46",
-                    "notes": "@Rare Attack Form@",
-                    "cost": -80,
-                    "disabled": true
-                },
-                {
-                    "id": "0ed89045-94df-4ab0-ac26-53103a2ad43f",
-                    "type": "modifier",
-                    "name": "Laminate",
-                    "reference": "RSWL18",
-                    "cost": 10,
-                    "disabled": true
-                },
-                {
-                    "id": "a1baddab-14e3-402e-a209-1eee48ba98ec",
-                    "type": "modifier",
-                    "name": "Malediction-Proof",
-                    "reference": "PSI14",
-                    "cost": 50,
-                    "disabled": true
-                },
-                {
-                    "id": "b1b407f3-24ca-4beb-8f3a-d362891e5af9",
-                    "type": "modifier",
-                    "name": "Maledictions Only",
-                    "reference": "PSI14",
-                    "disabled": true
-                },
-                {
-                    "id": "a48b115e-bf63-41f8-84cd-3b6d1e41653e",
-                    "type": "modifier",
-                    "name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
-                    "reference": "B47",
-                    "cost": -10,
+                    "name": "Hypersensory",
+                    "reference": "P46",
+                    "cost": 40,
                     "disabled": true
                 }
             ],
-            "levels": 4,
-            "points_per_level": 5,
-            "features": [
-                {
-                    "type": "dr_bonus",
-                    "location": "skull",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "face",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "neck",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "torso",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "vitals",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "groin",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "arm",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "hand",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "leg",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "foot",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "tail",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "wing",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "fin",
-                    "amount": 1,
-                    "per_level": true
-                },
-                {
-                    "type": "dr_bonus",
-                    "location": "brain",
-                    "amount": 1,
-                    "per_level": true
-                }
-            ],
-            "can_level": true,
+            "base_points": 25,
             "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "8496616c-b1e7-4483-b112-0c45b6889c3b",
-            "type": "trait",
-            "name": "Central Stalk Weakness",
-            "notes": "The mulcher's central stalk lies hidden within the mulcher's fungal mass. When exposed, the central stalk can be attacked and destroyed (AC 13; hp 50; vulnerability to acid, cold, and fire damage). If the central stalk is destroyed, the mulcher has -3 on attack rolls and can't use Expose Stalk until it regrows a new central stalk at the end of its next long rest.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "e848bcde-1a20-4012-a439-a16efa4531d4",
-            "type": "trait",
-            "name": "Disturbed Soil (Exposed Stalk Only)",
-            "notes": "The ground within 20 feet of the mulcher is difficult terrain.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "3c53a6a5-8849-4e09-ab85-241ad658db54",
-            "type": "trait",
-            "name": "Mulcher Pit",
-            "notes": "If the mulcher burrows at least 20 feet straight toward a creature, it can dig a 10-foot diameter, 20-foot-deep pit beneath the creature. Each Large or smaller creature in the pit's area must succeed on a DX - 2 roll or fall into the mycelium-lined pit and land prone, taking 2d + 1 piercing damage from the spiked mycelium in addition to any falling damage. The mulcher can make one Mycelium Spike attack against a prone creature in the pit as a bonus action.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "56bf1c45-9b7d-4302-aa99-f61120977f8d",
-            "type": "trait",
-            "name": "Stalk Regeneration (Exposed Stalk Only)",
-            "notes": "The mulcher gains 15 hp at the start of its turn if it has at least 1 hp.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "e161487d-6401-468e-aa4a-c1f70d8fa746",
-            "type": "action",
-            "name": "Multiattack",
-            "notes": "The mulcher makes two Mycelium Spike attacks. Mycelium Spike. Melee Weapon {@action Attack}: DC 12 to hit, reach 15 ft., one target. Hit: 2d + 1 piercing damage, and the target must succeed on a ST - 2 roll or be grappled (escape {@dc 15}) if the mulcher doesn't have two other creatures grappled.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "9dc8bbbc-5a25-4145-87b5-60b459e59ae7",
-            "type": "action",
-            "name": "Excavate",
-            "notes": "While underground, the mulcher creates a 20-foot square cover on the ground over itself and lurks just below the surface. The cover is identical to the ground around it. When a creature enters the cover's space, the mulcher can make one Mycelium Spike attack against the creature as a reaction, destroying the cover. The target has -3 on the saving throw to avoid being grappled.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "7becc6d2-e2f0-4e63-89c1-b9a2759ae5f9",
-            "type": "action",
-            "name": "Expose Stalk",
-            "notes": "For 1 fp do the following on your turn in addition to a maneuver. The mulcher exposes its central stalk above the ground until the end of its next turn or until it ends the effect as a bonus action. While the central stalk is exposed, the mulcher can't burrow.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "f788c134-8809-47cc-b89f-1b556b2973b6",
-            "type": "action",
-            "name": "Rapid Burrow",
-            "notes": "For 1 fp do the following on your turn in addition to a maneuver. The mulcher burrows up to 60 feet. {@action Opportunity attack||Opportunity attacks} against it are made with -3 when the mulcher burrows out of an enemy's reach in this way. Creatures grappled by it are freed before it burrows.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "707349ea-c4eb-48a2-9e8f-b8a937693094",
-            "type": "action",
-            "name": "Emergent Stalk",
-            "notes": "For 1 fp, the following can be done following the turn of another creature. When the mulcher is reduced to below half its hp maximum or when a creature scores a critical hit against it, the mulcher immediately uses Expose Stalk.",
-            "base_points": 5,
-            "calc": {
-                "points": 5
-            }
-        },
-        {
-            "id": "a30c5a12-a0d5-4b0c-ac7f-95daf7a9b539",
-            "type": "trait",
-            "name": "Blindsight",
-            "userdesc": "Can perceive its surroundings without relying on sight, within 60 ft.",
-            "base_points": 40,
-            "calc": {
-                "points": 40
+                "points": 25
             }
         }
     ],
-    "skills": [
-        {
-            "id": "faf6554d-26b6-4046-9c44-e630cb6c09b1",
-            "type": "skill",
-            "name": "Observation",
-            "reference": "B211",
-            "tags": [
-                "Criminal",
-                "Military",
-                "Police",
-                "Spy",
-                "Street"
-            ],
-            "difficulty": "per/a",
-            "points": 6,
-            "defaulted_from": {
-                "type": "per",
-                "modifier": -5,
-                "level": 10,
-                "adjusted_level": 10,
-                "points": -10
-            },
-            "defaults": [
-                {
-                    "type": "per",
-                    "modifier": -5
-                },
-                {
-                    "type": "skill",
-                    "name": "Shadowing",
-                    "modifier": -5
-                }
-            ],
-            "calc": {
-                "level": 14,
-                "rsl": "Per-1"
-            }
-        },
-        {
-            "id": "c2d3c3d5-2efd-4c1f-a857-f39c35f1769f",
-            "type": "skill",
-            "name": "Stealth",
-            "reference": "B222",
-            "tags": [
-                "Criminal",
-                "Police",
-                "Spy",
-                "Street"
-            ],
-            "difficulty": "dx/a",
-            "points": 20,
-            "encumbrance_penalty_multiplier": 1,
-            "defaulted_from": {
-                "type": "iq",
-                "modifier": -5,
-                "level": 10,
-                "adjusted_level": 10,
-                "points": 1
-            },
-            "defaults": [
-                {
-                    "type": "iq",
-                    "modifier": -5
-                },
-                {
-                    "type": "dx",
-                    "modifier": -5
-                }
-            ],
-            "calc": {
-                "level": 11,
-                "rsl": "DX+0"
-            }
-        }
-    ],
+    "skills": [],
     "equipment": [],
     "created_date": "2023-05-27T11:02:04-07:00",
     "modified_date": "2023-05-27T11:04:03-07:00",

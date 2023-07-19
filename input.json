@@ -1,80 +1,80 @@
 {
-  "source": "ToB3",
-  "page": 191,
-  "name": "Mulcher",
-  "group": [
-    "Fungi"
-  ],
-  "size": [
-    "G"
-  ],
-  "type": "plant",
-  "alignment": [
-    "U"
-  ],
-  "ac": [
+  "name": "Gibbering Mouther",
+  "source": "MM",
+  "page": 157,
+  "srd": true,
+  "otherSources": [
     {
-      "ac": 15,
-      "from": [
-        "natural armor"
-      ]
+      "source": "TftYP"
+    },
+    {
+      "source": "WDH"
+    },
+    {
+      "source": "WDMM"
+    },
+    {
+      "source": "ERLW"
+    },
+    {
+      "source": "IDRotF"
+    },
+    {
+      "source": "TCE"
+    },
+    {
+      "source": "CRCotN"
+    },
+    {
+      "source": "JttRC"
+    },
+    {
+      "source": "KftGV"
     }
   ],
+  "size": [
+    "M"
+  ],
+  "type": "aberration",
+  "alignment": [
+    "N"
+  ],
+  "ac": [
+    9
+  ],
   "hp": {
-    "formula": "9d20 + 45",
-    "average": 139
+    "average": 67,
+    "formula": "9d8 + 27"
   },
   "speed": {
     "walk": 10,
-    "burrow": 30
+    "swim": 10
   },
-  "str": 18,
-  "dex": 6,
-  "con": 20,
-  "int": 4,
+  "str": 10,
+  "dex": 8,
+  "con": 16,
+  "int": 3,
   "wis": 10,
-  "cha": 1,
-  "skill": {
-    "perception": "+3",
-    "stealth": "+4"
-  },
+  "cha": 6,
+  "senses": [
+    "darkvision 60 ft."
+  ],
+  "passive": 10,
   "conditionImmune": [
-    "blinded",
-    "deafened",
-    "frightened",
     "prone"
   ],
-  "senses": [
-    "blindsight 120 ft. (blind beyond this radius)"
-  ],
-  "passive": 13,
-  "senseTags": [
-    "B"
-  ],
-  "cr": "6",
+  "cr": "2",
   "trait": [
     {
-      "name": "Central Stalk Weakness",
+      "name": "Aberrant Ground",
       "entries": [
-        "The mulcher's central stalk lies hidden within the mulcher's fungal mass. When exposed, the central stalk can be attacked and destroyed (AC 13; hp 50; vulnerability to acid, cold, and fire damage). If the central stalk is destroyed, the mulcher has disadvantage on attack rolls and can't use Expose Stalk until it regrows a new central stalk at the end of its next long rest."
+        "The ground in a 10-foot radius around the mouther is doughlike {@quickref difficult terrain||3}. Each creature that starts its turn in that area must succeed on a {@dc 10} Strength saving throw or have its speed reduced to 0 until the start of its next turn."
       ]
     },
     {
-      "name": "Disturbed Soil (Exposed Stalk Only)",
+      "name": "Gibbering",
       "entries": [
-        "The ground within 20 feet of the mulcher is difficult terrain."
-      ]
-    },
-    {
-      "name": "Mulcher Pit",
-      "entries": [
-        "If the mulcher burrows at least 20 feet straight toward a creature, it can dig a 10-foot diameter, 20-foot-deep pit beneath the creature. Each Large or smaller creature in the pit's area must succeed on a {@dc 15} Dexterity saving throw or fall into the mycelium-lined pit and land {@condition prone}, taking 14 ({@damage 4d6}) piercing damage from the spiked mycelium in addition to any falling damage. The mulcher can make one Mycelium Spike attack against a {@condition prone} creature in the pit as a bonus action."
-      ]
-    },
-    {
-      "name": "Stalk Regeneration (Exposed Stalk Only)",
-      "entries": [
-        "The mulcher gains 15 hp at the start of its turn if it has at least 1 hp."
+        "The mouther babbles incoherently while it can see any creature and isn't {@condition incapacitated}. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a {@dc 10} Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a {@dice d8} to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack."
       ]
     }
   ],
@@ -82,37 +82,31 @@
     {
       "name": "Multiattack",
       "entries": [
-        "The mulcher makes two Mycelium Spike attacks. Mycelium Spike. Melee Weapon {@action Attack}: {@hit 7} to hit, reach 15 ft., one target. Hit: 15 ({@damage 2d10 + 4}) piercing damage, and the target must succeed on a {@dc 15} Strength saving throw or be {@condition grappled} (escape {@dc 15}) if the mulcher doesn't have two other creatures {@condition grappled}."
+        "The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle."
       ]
     },
     {
-      "name": "Excavate",
+      "name": "Bites",
       "entries": [
-        "While underground, the mulcher creates a 20-foot square cover on the ground over itself and lurks just below the surface. The cover is identical to the ground around it. When a creature enters the cover's space, the mulcher can make one Mycelium Spike attack against the creature as a reaction, destroying the cover. The target has disadvantage on the saving throw to avoid being {@condition grappled}."
-      ]
-    }
-  ],
-  "bonus": [
-    {
-      "name": "Expose Stalk",
-      "entries": [
-        "The mulcher exposes its central stalk above the ground until the end of its next turn or until it ends the effect as a bonus action. While the central stalk is exposed, the mulcher can't burrow."
+        "{@atk mw} {@hit 2} to hit, reach 5 ft., one creature. {@h}17 ({@damage 5d6}) piercing damage. If the target is Medium or smaller, it must succeed on a {@dc 10} Strength saving throw or be knocked {@condition prone}. If the target is killed by this damage, it is absorbed into the mouther."
       ]
     },
     {
-      "name": "Rapid Burrow",
+      "name": "Blinding Spittle {@recharge 5}",
       "entries": [
-        "The mulcher burrows up to 60 feet. {@action Opportunity attack||Opportunity attacks} against it are made with disadvantage when the mulcher burrows out of an enemy's reach in this way. Creatures {@condition grappled} by it are freed before it burrows."
+        "The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a {@dc 13} Dexterity saving throw or be {@condition blinded} until the end of the mouther's next turn."
       ]
     }
   ],
-  "reaction": [
-    {
-      "name": "Emergent Stalk",
-      "entries": [
-        "When the mulcher is reduced to below half its hp maximum or when a creature scores a critical hit against it, the mulcher immediately uses Expose Stalk."
-      ]
-    }
+  "environment": [
+    "underdark"
+  ],
+  "soundClip": {
+    "type": "internal",
+    "path": "bestiary/gibbering-mouther.mp3"
+  },
+  "senseTags": [
+    "D"
   ],
   "actionTags": [
     "Multiattack"
@@ -120,64 +114,15 @@
   "damageTags": [
     "P"
   ],
+  "miscTags": [
+    "AOE",
+    "MW"
+  ],
   "conditionInflict": [
-    "grappled"
+    "blinded",
+    "prone"
   ],
-  "environment": [
-    "farmland",
-    "forest",
-    "hill"
-  ],
-  "fluff": {
-    "entries": [
-      {
-        "type": "entries",
-        "entries": [
-          {
-            "type": "entries",
-            "entries": [
-              {
-                "type": "quote",
-                "entries": [
-                  "The large orange flower reveals a tall, blue stalk. The petals clamp on a swarm of insects, showing their fleshy, tooth-like nature."
-                ]
-              },
-              "A voracious fungus, the mulcher hides within topsoil, waiting to trap oblivious creatures.",
-              {
-                "type": "entries",
-                "name": "Hidden Danger",
-                "entries": [
-                  "This massive fungus is as sweeping and bulky as a {@creature dragon turtle}. It uses the ground as cover, where it can ambush prey that travels above it. Alternatively, it can trigger pit traps beneath its prey, impaling the falling creatures on its spike-like mycelium. Once prey has been impaled, the fungus drinks in the victim's blood as greedily as groundwater."
-                ]
-              },
-              {
-                "type": "entries",
-                "name": "Weak Spot",
-                "entries": [
-                  "When injured or when it fails to capture sufficient food, the mulcher pushes its fragile central stalk to the surface, releasing insect-attracting pheromones to gain some quick nutrients from the meager prey."
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "images": [
-      {
-        "type": "image",
-        "href": {
-          "type": "external",
-          "url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/Duskwilt.webp"
-        }
-      }
-    ]
-  },
-  "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/token/Duskwilt.webp",
-  "altArt": [
-    {
-      "tokenUrl": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB3/creature/token2/Mulcher.webp",
-      "name": "Red border",
-      "source": "ToB3"
-    }
-  ]
+  "hasToken": true,
+  "hasFluff": true,
+  "hasFluffImages": true
 }
