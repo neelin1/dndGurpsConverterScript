@@ -155,3 +155,9 @@ Adds each languge as a language trait
 
 ## Senses
 Senses are added as traits
+
+## To-Do
+- Give injury tolerance to all undead
+- Give high pain threshold, indominatable, doesn't breathe, doesn't sleep to all undead and constructs
+- Change immunity to the immunity from DFM
+- Give diffuse to oozes
